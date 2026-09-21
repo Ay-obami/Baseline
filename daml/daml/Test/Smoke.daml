@@ -1,0 +1,37 @@
+module Test.Smoke where
+
+import Daml.Script
+
+template Smoke
+  with
+    owner : Party
+    note : Text
+  where
+    signatory owner
+
+    choice ArchiveSmoke : ()
+      controller owner
+      do
+        pure ()
+
+testSmoke : Script ()
+testSmoke = script do
+  owner <- allocateParty "SmokeOwner"
+  outsider <- allocateParty "SmokeOutsider"
+
+  cid <- submit owner do
+    createCmd Smoke with
+      owner
+      note = "BaseLine CP1"
+
+  ownerContracts <- query @Smoke owner
+  outsiderContracts <- query @Smoke outsider
+
+  assertMsg "owner must see exactly one smoke contract" (length ownerContracts == 1)
+  assertMsg "outsider must not see the smoke contract" (null outsiderContracts)
+
+  submitMustFail outsider do
+    exerciseCmd cid ArchiveSmoke
+
+  submit owner do
+    exerciseCmd cid ArchiveSmoke
