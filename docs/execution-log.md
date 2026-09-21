@@ -44,3 +44,12 @@
 - `dpm build` completed successfully and produced `.daml/dist/baseline-0.1.0.dar` under SDK 3.5.11.
 - Compiler portion of CP1 is now green.
 - `dpm test` execution result still needs to be recorded before PR #1 is merged and before local verification is considered complete.
+
+## 2026-09-21 — Local CP1 Daml verification complete
+
+- `dpm test` passed under SDK 3.5.11.
+- `daml/Test/Math.daml:testMath`: PASS, 0 active contracts, 0 transactions.
+- `daml/Test/Smoke.daml:testSmoke`: PASS, 0 active contracts, 3 transactions.
+- The smoke script proves authorized creation, owner visibility, outsider invisibility, unauthorized exercise rejection, and authorized cleanup in Daml Script.
+- `dpm build` previously produced `.daml/dist/baseline-0.1.0.dar`.
+- Local compiler/test portion of CP1 is complete. The remaining CP1 gate is a target HackCanton/Canton environment smoke transaction with recorded package/update identifiers.
