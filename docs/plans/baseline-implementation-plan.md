@@ -146,7 +146,8 @@ Numeric assertions below use cents: `$3M = "300000000"`.
 - [ ] Add a smoke test which creates an innocuous contract as its allowed party, queries it as that party, and rejects an unauthorized exercise.
 - [ ] Run the smoke test and preserve the failure before wiring the adapter.
 - [ ] Implement SDK-specific create/query/exercise/update mappings inside the adapter. Keep environment URLs and credentials in runtime configuration.
-- [ ] Pin the working versions and execute a smoke transaction on the required network. Record package ID, update ID, environment and commit; omit credentials.
+- [x] Pin the locally working DPM/SDK versions (DPM 1.0.22, SDK 3.5.11); target-network compatibility still requires proof.
+- [ ] Execute a smoke transaction on the organizer-provided DevNet/hosted environment. Record package ID, update ID, environment and commit; omit credentials.
 - [ ] Commit: `chore: establish supported Canton toolchain and deployment smoke test`.
 
 **Implementation algorithm:** `read config → validate required settings → connect as scoped identity → submit → wait for committed/rejected result → query → assert permitted visibility`. Connection or authorization failure must exit nonzero.
@@ -168,11 +169,11 @@ assert.equal(result.unauthorizedExercise, 'rejected');
 
 **Consumes:** Toolchain. **Produces:** `creditContribution : Int -> Int -> Int`, `creditLimit : Int -> Int -> Int`, `deficiency : Int -> Int -> Int`, and `parseMoney(input: string): bigint`.
 
-- [ ] Add failing table cases: 20M at 8000 bps → 16M; 10M → 8M; one cent at 8000 bps → zero cents; rate −1 and 10001 rejected; negative balances rejected; max bound enforced.
+- [x] Add failing table cases: 20M at 8000 bps → 16M; 10M → 8M; one cent at 8000 bps → zero cents; rate −1 and 10001 rejected; negative balances rejected; max bound enforced.
 - [ ] Run `node scripts/verify.mjs math` and confirm missing/incorrect behavior fails.
-- [ ] Implement the validated arithmetic below and canonical decimal decoding. Reject signs on nonnegative amounts, decimal fractions, exponent notation, and empty strings.
-- [ ] Assert sums produce 40M initially and 32M after exclusion; cap the base by contractual limit.
-- [ ] Test HTTP round-trip without conversion through JavaScript `Number`.
+- [x] Implement the validated arithmetic below and canonical decimal decoding. Reject signs on nonnegative amounts, decimal fractions, exponent notation, and empty strings.
+- [x] Assert sums produce 40M initially and 32M after exclusion; cap the base by contractual limit.
+- [x] Test HTTP/JSON round-trip without conversion through JavaScript `Number`.
 - [ ] Commit: `feat: define bounded money and borrowing-base arithmetic`.
 
 ```text
