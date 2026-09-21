@@ -1,7 +1,7 @@
 import { spawnSync } from 'node:child_process';
 
 const groups = {
-  math: ['node', ['--test', '--experimental-strip-types', 'packages/ledger/test/money.test.ts', 'packages/ledger/test/fixture.test.ts']],
+  math: ['node', ['--test', '--experimental-strip-types', 'packages/ledger/test/money.test.ts', 'packages/ledger/test/fixture.test.ts', 'packages/ledger/test/decode.test.ts']],
 };
 
 const requested = process.argv[2] ?? 'all';
