@@ -1,0 +1,9 @@
+# Candidate SDK only; CP1 must pin the organizer-supported version after DPM is available.
+sdk-version: 3.5.7
+name: baseline
+source: daml
+version: 0.1.0
+dependencies:
+  - daml-prim
+  - daml-stdlib
+  - daml-script

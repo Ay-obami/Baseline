@@ -1,0 +1,25 @@
+{
+  "status": "cp1-open",
+  "recordedAt": "2026-09-21",
+  "runtime": {
+    "java": "21",
+    "node": "22.16.0",
+    "npm": "10.9.2"
+  },
+  "dpm": {
+    "installed": false,
+    "latestPublicReleaseObserved": "1.0.22",
+    "source": "https://github.com/digital-asset/dpm/releases/tag/1.0.22"
+  },
+  "damlSdk": {
+    "installed": false,
+    "candidateFromCurrentDocsExample": "3.5.7",
+    "pinned": false,
+    "note": "Pin only after DPM can query/install the organizer-supported SDK in a network-enabled environment."
+  },
+  "targetNetwork": {
+    "verified": false,
+    "name": null,
+    "note": "HackCanton target network/account requirements still need confirmation from the organizer-controlled hackathon portal/opening materials."
+  }
+}

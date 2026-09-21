@@ -1,0 +1,34 @@
+module BaseLine.Math where
+
+maxCents : Int
+maxCents = 1000000000000
+
+validateAmount : Int -> Int
+validateAmount amount =
+  if amount < 0 || amount > maxCents
+    then error "amount outside supported range"
+    else amount
+
+validateBps : Int -> Int
+validateBps bps =
+  if bps < 0 || bps > 10000
+    then error "bps outside [0,10000]"
+    else bps
+
+creditContribution : Int -> Int -> Int
+creditContribution amount bps =
+  let a = validateAmount amount
+      r = validateBps bps
+  in (a * r) `div` 10000
+
+creditLimit : Int -> Int -> Int
+creditLimit borrowingBase facilityLimit =
+  min (validateAmount borrowingBase) (validateAmount facilityLimit)
+
+signedHeadroom : Int -> Int -> Int
+signedHeadroom limit principal =
+  validateAmount limit - validateAmount principal
+
+deficiency : Int -> Int -> Int
+deficiency limit principal =
+  max 0 (principal - limit)

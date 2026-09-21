@@ -1,0 +1,11 @@
+module BaseLine.Types where
+
+type Money = Int
+
+type BasisPoints = Int
+
+data ProcessingState = Current | EligibilityUpdatePending | Paused
+  deriving (Eq, Show)
+
+data CreditState = Compliant | Deficient
+  deriving (Eq, Show)

@@ -1,0 +1,18 @@
+module Test.Math where
+
+import Daml.Script
+import BaseLine.Math
+
+millionCents : Int
+millionCents = 100000000
+
+testMath : Script ()
+testMath = script do
+  assertEq (creditContribution (20 * millionCents) 8000) (16 * millionCents)
+  assertEq (creditContribution (10 * millionCents) 8000) (8 * millionCents)
+  assertEq (creditContribution 1 8000) 0
+  assertEq (creditLimit (40 * millionCents) (40 * millionCents)) (40 * millionCents)
+  assertEq (creditLimit (32 * millionCents) (40 * millionCents)) (32 * millionCents)
+  assertEq (signedHeadroom (40 * millionCents) (35 * millionCents)) (5 * millionCents)
+  assertEq (signedHeadroom (32 * millionCents) (35 * millionCents)) (-3 * millionCents)
+  assertEq (deficiency (32 * millionCents) (35 * millionCents)) (3 * millionCents)
