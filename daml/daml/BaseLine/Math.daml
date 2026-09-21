@@ -1,5 +1,7 @@
 module BaseLine.Math where
 
+-- CP1 verification branch: compile and test this package with the official DPM workflow.
+
 maxCents : Int
 maxCents = 1000000000000
 
@@ -19,7 +21,7 @@ creditContribution : Int -> Int -> Int
 creditContribution amount bps =
   let a = validateAmount amount
       r = validateBps bps
-  in (a * r) `div` 10000
+  in (a * r) / 10000
 
 creditLimit : Int -> Int -> Int
 creditLimit borrowingBase facilityLimit =
