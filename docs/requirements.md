@@ -66,3 +66,12 @@ The sandbox cannot resolve external hosts from the shell, so the official DPM in
 - Post-cure principal: $32M
 - Post-cure reserve: $7M
 - Post-cure available-to-draw: $0
+
+
+## CP1 DevNet access status — 2026-09-21
+
+- HackCanton Season 3 publicly states that builders receive a DevNet environment and resources.
+- Public organizer materials do not expose the project-specific DevNet credentials/onboarding flow.
+- Canton community support for recent hackathon builders points to Seaport as a hosted DevNet path.
+- Direct validator onboarding is a separate path and requires network onboarding details such as sponsor/onboarding credentials; it should not be assumed necessary for the MVP unless the organizer specifically requires it.
+- BaseLine will prefer the organizer-provided hosted/DevNet path for CP1 smoke deployment and avoid standing up a full validator unless required.
