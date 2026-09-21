@@ -8,7 +8,7 @@
 
 **Tech stack:** Canton and its environment-supported Daml SDK; TypeScript for the ledger adapter, worker, and web application; React/Next.js for the interface; Daml Script for contract tests; Node test runner for adapter and integration assertions; Playwright for browser verification. Pin actual supported versions during Task 1; no version or network compatibility is assumed by this plan.
 
-**Spec:** [BaseLine-Improved-MVP-Scope.md](sandbox:/workspace/scratch/bfbb3c07697a/BaseLine-Improved-MVP-Scope.md), version 2. At repository initialization, copy the complete specification into `docs/specs/baseline-mvp-scope.md`; keep its source identity and any subsequent approved changes in the plan's execution log.
+**Spec:** [BaseLine MVP Scope](../specs/baseline-mvp-scope.md), version 2. At repository initialization, copy the complete specification into `docs/specs/baseline-mvp-scope.md`; keep its source identity and any subsequent approved changes in the plan's execution log.
 
 **Starting state:** This is a greenfield implementation plan. No application repository, existing source code, network credentials, or working deployment has been inspected. All paths below are proposed repository-relative paths. This document plans implementation; it does not claim that any tests or deployments have run.
 
