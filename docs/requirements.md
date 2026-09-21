@@ -19,13 +19,18 @@ Sources:
 - https://docs.canton.network/sdks-tools/cli-tools/dpm
 - https://www.canton.network/developer-resources
 
+## Verified HackCanton build requirements
+
+- Build phase: September 18–October 9, 2026.
+- Submission deadline: October 9, 2026 at 23:59 UTC.
+- Tracks: Real-World Asset & Business Workflows; Financial Applications: DeFi, Exchanges & Prediction Markets; Investment Infrastructure: Funds, DAOs & Governance; Data, Analytics & Ecosystem Dashboards; Open Track: Build Anything.
+- Opening materials explicitly provide DevNet environment/resources.
+
 ## Still unverified / must be confirmed before CP1 can pass
 
-- Submission deadline: October 9, 2026 (opening-ceremony materials and CantonNews report 23:59 UTC).
-- Tracks: Real-World Asset & Business Workflows; Financial Applications: DeFi, Exchanges & Prediction Markets; Investment Infrastructure: Funds, DAOs & Governance; Data, Analytics & Ecosystem Dashboards; Open Track: Build Anything.
-- Opening materials explicitly provide a DevNet environment/resources; exact credentials/onboarding still require organizer access.
+- Exact DevNet credentials/onboarding for this repository.
 - Whether wallet connect/disconnect is mandatory for judging or merely optional.
-- Required submission materials and deployment evidence.
+- Required submission materials and deployment evidence from the organizer portal.
 - Organizer-supported/pinned Daml SDK version for the target environment.
 
 The AppsFactory hackathon page is client-rendered in the available text interface. Timeline, tracks, and DevNet availability were recovered from the opening-ceremony materials; portal-specific access and wallet requirements still need direct verification.
