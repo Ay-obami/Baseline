@@ -11,8 +11,9 @@ Implementation has started at CP1/Task 2. The canonical scope and implementation
 - ✅ Repository initialized
 - ✅ Commercial fixture recorded
 - ✅ TypeScript fixed-precision arithmetic tests passing
-- ⚠️ DPM/Daml SDK unavailable in the current sandbox, so Daml compilation and target-network smoke deployment are not yet proven
-- ⏳ CP1 remains open until a real Canton transaction is recorded
+- ✅ DPM 1.0.22 + Daml SDK 3.5.11 verified locally
+- ✅ `dpm test` and `dpm build` pass; `baseline-0.1.0.dar` produced
+- ⏳ CP1 remains open only until a real hackathon DevNet/Seaport transaction is recorded
 
 ## Verify currently runnable checks
 
@@ -26,3 +27,5 @@ npm run test:math
 - `docs/plans/baseline-implementation-plan.md`
 - `docs/requirements.md`
 - `docs/execution-log.md`
+
+- `docs/devnet-deployment.md` — CP1 Seaport/DevNet deployment runbook
