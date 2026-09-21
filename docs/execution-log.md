@@ -37,3 +37,10 @@
 - First compiler pass exposed use of invalid `div` helper in `Math.daml`; patched to `/` on PR #1.
 - Second compiler pass reached `Test/Math.daml` and exposed unavailable `assertEq`; patched to explicit `assertMsg` equality predicates on PR #1.
 - Daml test/build still pending rerun after commit `6c675153cd7115ca3e8df2dc58bf596eb3675b6f`.
+
+## 2026-09-21 — Daml build passes locally
+
+- User reran the CP1 verification branch after the Daml fixes.
+- `dpm build` completed successfully and produced `.daml/dist/baseline-0.1.0.dar` under SDK 3.5.11.
+- Compiler portion of CP1 is now green.
+- `dpm test` execution result still needs to be recorded before PR #1 is merged and before local verification is considered complete.
