@@ -1,0 +1,47 @@
+name: CP1 Daml Verification
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'daml/**'
+      - '.github/workflows/cp1-daml.yml'
+  workflow_dispatch:
+
+jobs:
+  daml:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: daml
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Install DPM
+        working-directory: .
+        run: |
+          curl -fsSL https://get.digitalasset.com/install/install.sh | sh
+          echo "$HOME/.dpm/bin" >> "$GITHUB_PATH"
+
+      - name: Verify DPM
+        run: dpm --version
+
+      - name: Install project SDK and dependencies
+        run: dpm install
+
+      - name: Run Daml tests
+        run: dpm test
+
+      - name: Build DAR
+        run: dpm build
+
+      - name: List build artifacts
+        run: find .daml/dist -maxdepth 1 -type f -print
