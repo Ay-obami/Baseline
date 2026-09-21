@@ -13,9 +13,10 @@
   },
   "damlSdk": {
     "installed": false,
-    "candidateFromCurrentDocsExample": "3.5.7",
+    "candidateFromCurrentDocsExample": "3.5.11",
     "pinned": false,
-    "note": "Pin only after DPM can query/install the organizer-supported SDK in a network-enabled environment."
+    "note": "Observed from the official installer on 2026-09-21; pin is provisional until compile and HackCanton target-environment compatibility are proven.",
+    "observedFromInstaller": true
   },
   "targetNetwork": {
     "verified": false,
