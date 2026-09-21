@@ -28,3 +28,12 @@
 - GitHub reports zero workflow runs for connector-created pushes and PR events; no CI result is claimed.
 - Added `docs/cp1-runbook.md` with the exact remaining compiler and DevNet evidence steps.
 - CP1 remains OPEN until the Daml package is actually compiled/tested and a target-network smoke transaction is recorded.
+
+## 2026-09-21 — Local DPM/Java compiler evidence
+
+- Standalone DPM 1.0.22 installed successfully on Ubuntu.
+- `dpm install` successfully installed SDK 3.5.11.
+- OpenJDK 21.0.12 and `javac` 21.0.12 installed; `JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64`.
+- First compiler pass exposed use of invalid `div` helper in `Math.daml`; patched to `/` on PR #1.
+- Second compiler pass reached `Test/Math.daml` and exposed unavailable `assertEq`; patched to explicit `assertMsg` equality predicates on PR #1.
+- Daml test/build still pending rerun after commit `6c675153cd7115ca3e8df2dc58bf596eb3675b6f`.
