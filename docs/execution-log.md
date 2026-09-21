@@ -53,3 +53,11 @@
 - The smoke script proves authorized creation, owner visibility, outsider invisibility, unauthorized exercise rejection, and authorized cleanup in Daml Script.
 - `dpm build` previously produced `.daml/dist/baseline-0.1.0.dar`.
 - Local compiler/test portion of CP1 is complete. The remaining CP1 gate is a target HackCanton/Canton environment smoke transaction with recorded package/update identifiers.
+
+## 2026-09-21 — Seaport login verified, hackathon org pending
+
+- User successfully authenticated into 5N Seaport DevNet.
+- Seaport currently shows only Personal mode; no HackCanton organization is present in the org switcher.
+- Do not create a replacement organization for CP1.
+- Remaining access step: provide the Loop DevNet wallet Party ID to the hackathon organizer/admin and be added to the HackCanton organization/team that exposes the shared `5n sandbox` validator.
+- CP1 remains open pending org access, DAR deployment, and one recorded DevNet smoke transaction.
