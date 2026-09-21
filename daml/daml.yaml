@@ -1,5 +1,5 @@
-# Candidate SDK only; CP1 must pin the organizer-supported version after DPM is available.
-sdk-version: 3.5.7
+# SDK observed from the current official installer on 2026-09-21; target-environment compatibility still must be proven in CP1.
+sdk-version: 3.5.11
 name: baseline
 source: daml
 version: 0.1.0
