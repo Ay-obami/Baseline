@@ -61,3 +61,14 @@
 - Do not create a replacement organization for CP1.
 - Remaining access step: provide the Loop DevNet wallet Party ID to the hackathon organizer/admin and be added to the HackCanton organization/team that exposes the shared `5n sandbox` validator.
 - CP1 remains open pending org access, DAR deployment, and one recorded DevNet smoke transaction.
+
+## 2026-10-01 — Portfolio-readiness verification
+
+- Rebased portfolio documentation work on current `main` base `b7c89fab2152a09ce8a3795fddf2d38ef3da4d2f`.
+- `npm run verify`: PASS, 8/8 Node tests.
+- `dpm test`: PASS for `testMath` and `testSmoke`; smoke path records 3 transactions.
+- `dpm build`: PASS; produced `.daml/dist/baseline-0.1.0.dar` under project SDK 3.5.11.
+- Build warning retained as a documented low-severity packaging note: template code and `daml-script` should be separated for production packaging.
+- Updated `docs/cp1-runbook.md` to remove stale SDK/branch/sandbox-blocker claims.
+- Added `docs/portfolio-checklist.md` with reproducible evidence, safe claims, and release limits.
+- Shared HackCanton DevNet/Seaport transaction remains BLOCKED on organizer org access; CP2 remains PARKED.

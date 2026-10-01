@@ -27,5 +27,5 @@ npm run test:math
 - `docs/plans/baseline-implementation-plan.md`
 - `docs/requirements.md`
 - `docs/execution-log.md`
-
+- `docs/portfolio-checklist.md` — portfolio-safe claims, reproduction evidence, and parked limits
 - `docs/devnet-deployment.md` — CP1 Seaport/DevNet deployment runbook
